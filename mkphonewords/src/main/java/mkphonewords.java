@@ -6,6 +6,9 @@ import java.util.*;
 
 
 public class mkphonewords {
+    private static void processDictEntry(String [] token, Map<String, List<String []>> phoneWordMap) {
+    }
+
     private static Map<String, List<String []>> createPhoneWordMapFromDictonary(String datName) {
 
         File file = new File(datName);
@@ -15,13 +18,17 @@ public class mkphonewords {
             return null;
         }
 
-            BufferedReader in = null;
+        BufferedReader in = null;
         try {
             in = new BufferedReader(new FileReader(datName));
             String zeile = null;
             Map<String, List<String []>> phoneWordMap = new HashMap<String, List<String []>>();
             while ((zeile = in.readLine()) != null) {
-                System.out.println("Gelesene Zeile: " + zeile);
+		String [] token = zeile.trim().split("\\s+");
+		if (token.length > 1) {
+			processDictEntry(token, phoneWordMap);
+		}
+                // System.out.println("Gelesene Zeile: " + zeile);
 
             }
             return phoneWordMap;
