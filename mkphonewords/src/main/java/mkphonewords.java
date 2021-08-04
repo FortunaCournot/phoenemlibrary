@@ -6,7 +6,40 @@ import java.util.*;
 
 
 public class mkphonewords {
+
+    private static void writePhoneWordMap(Map<String, List<String []>> phoneWordMap) {
+       for (Map.Entry<String, List<String []>> entry : phoneWordMap.entrySet()) {
+            String phone = entry.getKey();
+            List<String []> dictEntryList = entry.getValue();
+            System.out.print(phone);
+            for (String [] dictEntry : dictEntryList) {
+              System.out.print(" " + dictEntry[0]);
+            }
+            System.out.println("");
+       }
+    }
+
     private static void processDictEntry(String [] token, Map<String, List<String []>> phoneWordMap) {
+      String word = token[0];
+      for (int i=1; i<token.length; i++) {
+          List<String []> dictEntryList = phoneWordMap.get(token[i]);
+          if (dictEntryList == null) {
+              dictEntryList = new ArrayList();
+              phoneWordMap.put(token[i], dictEntryList);
+          }
+          if (dictEntryList.size() < 5) {
+	    dictEntryList.add(token);
+          }
+	  else {
+            for (int j=0; j<5; j++) {
+              if (token.length < dictEntryList.get(j).length) {
+                  dictEntryList.remove(j);
+	          dictEntryList.add(token);
+                  break;
+              }
+            }
+          }
+      }
     }
 
     private static Map<String, List<String []>> createPhoneWordMapFromDictonary(String datName) {
@@ -57,6 +90,7 @@ public class mkphonewords {
     }
 
 
+    writePhoneWordMap(phoneWordMap);
 
 
   }
