@@ -31,7 +31,7 @@ public class arpabet2xsampa {
 	ARPABET2XSAMPA.put("NX","N");
 	ARPABET2XSAMPA.put("NG","N");
 	ARPABET2XSAMPA.put("P","p");
-	ARPABET2XSAMPA.put("R","r\");
+	ARPABET2XSAMPA.put("R","r\\");
 	ARPABET2XSAMPA.put("S","s");
 	ARPABET2XSAMPA.put("SH","S");
 	ARPABET2XSAMPA.put("T","t");
@@ -72,7 +72,10 @@ public class arpabet2xsampa {
       newToken[0]=word;
 
       for (int i=1; i<token.length; i++) {
-          newToken[i]=ARPABET2XSAMPA.get(token[i]);
+          if (Character.isDigit(token[i].charAt(token[i].length()-1))) {
+              token[i]=token[i].substring(0,token[i].length()-1);
+          }
+          newToken[i]=ARPABET2XSAMPA.get(token[i].toUpperCase());
           if (newToken[i]==null)
           {
 	     System.err.println("token at word "+word+" unmapped: "+token[i]);
@@ -100,9 +103,13 @@ public class arpabet2xsampa {
             while ((zeile = in.readLine()) != null) {
 		String [] token = zeile.trim().toLowerCase().split("\\s+");
 		if (token.length > 1) {
-			String [] newToken = processDictEntry(token);
+		    String [] newToken = processDictEntry(token);
+                    for (int i=0; i<newToken.length; i++) {
+                        System.out.print(newToken[i]);
+                        System.out.print(" ");
+                    }
+                    System.out.println("");
 		}
-                // System.out.println("Gelesene Zeile: " + zeile);
 
             }
         } catch (IOException e) {
