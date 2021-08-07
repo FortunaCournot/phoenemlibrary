@@ -15,6 +15,49 @@ public class arpabet2xsampa {
     /**
      */
     private static void buildMapping() {
+	ARPABET2XSAMPA.put("B","b");
+	ARPABET2XSAMPA.put("D","d");
+	ARPABET2XSAMPA.put("JH","dZ");
+	ARPABET2XSAMPA.put("DH","D");
+	ARPABET2XSAMPA.put("F","f");
+	ARPABET2XSAMPA.put("G","g");
+	ARPABET2XSAMPA.put("H","h");
+	ARPABET2XSAMPA.put("HH","h");
+	ARPABET2XSAMPA.put("Y","j");
+	ARPABET2XSAMPA.put("K","k");
+	ARPABET2XSAMPA.put("L","l");
+	ARPABET2XSAMPA.put("M","m");
+	ARPABET2XSAMPA.put("N","n");
+	ARPABET2XSAMPA.put("NX","N");
+	ARPABET2XSAMPA.put("NG","N");
+	ARPABET2XSAMPA.put("P","p");
+	ARPABET2XSAMPA.put("R","r\");
+	ARPABET2XSAMPA.put("S","s");
+	ARPABET2XSAMPA.put("SH","S");
+	ARPABET2XSAMPA.put("T","t");
+	ARPABET2XSAMPA.put("CH","tS");
+	ARPABET2XSAMPA.put("TH","T");
+	ARPABET2XSAMPA.put("V","V");
+	ARPABET2XSAMPA.put("W","w");
+	ARPABET2XSAMPA.put("Z","z");
+	ARPABET2XSAMPA.put("ZH","Z");
+	ARPABET2XSAMPA.put("AX","@");
+	ARPABET2XSAMPA.put("AXR","@`");
+	ARPABET2XSAMPA.put("AE","{");
+	ARPABET2XSAMPA.put("AY","aI");
+	ARPABET2XSAMPA.put("AW","aU");
+	ARPABET2XSAMPA.put("AA","A");
+	ARPABET2XSAMPA.put("EY","eI");
+	ARPABET2XSAMPA.put("ER","3`");
+	ARPABET2XSAMPA.put("EH","E");
+	ARPABET2XSAMPA.put("IY","i");
+	ARPABET2XSAMPA.put("IH","I");
+	ARPABET2XSAMPA.put("OW","oU");
+	ARPABET2XSAMPA.put("AO","O");
+	ARPABET2XSAMPA.put("OY","OI");
+	ARPABET2XSAMPA.put("UW","u");
+	ARPABET2XSAMPA.put("UH","U");
+	ARPABET2XSAMPA.put("AH","V");
     }
 
     /**
