@@ -5,8 +5,14 @@ import java.io.IOException;
 import java.util.*;
 
 
+/**
+*/
 public class mkphonewords {
 
+    static final int WORDCOUNT = 15;
+
+    /**
+     */
     private static void writePhoneWordMap(Map<String, List<String []>> phoneWordMap) {
        for (Map.Entry<String, List<String []>> entry : phoneWordMap.entrySet()) {
             String phone = entry.getKey();
@@ -19,19 +25,38 @@ public class mkphonewords {
        }
     }
 
+    /**
+     */
     private static void processDictEntry(String [] token, Map<String, List<String []>> phoneWordMap) {
       String word = token[0];
+      if (word.startsWith(";")) {
+          return;
+      }
       for (int i=1; i<token.length; i++) {
           List<String []> dictEntryList = phoneWordMap.get(token[i]);
           if (dictEntryList == null) {
               dictEntryList = new ArrayList();
               phoneWordMap.put(token[i], dictEntryList);
           }
-          if (dictEntryList.size() < 5) {
+          if (dictEntryList.size() < WORDCOUNT) {
 	    dictEntryList.add(token);
           }
 	  else {
             for (int j=0; j<5; j++) {
+              if (token.length < 4) {
+		continue;
+              }
+
+              if( dictEntryList.get(j)[1].equals(token[i]) )
+              {
+		continue;
+              }
+
+              if( dictEntryList.get(j)[dictEntryList.get(j).length-1].equals(token[i]) )
+              {
+		continue;
+              }
+
               if (token.length < dictEntryList.get(j).length) {
                   dictEntryList.remove(j);
 	          dictEntryList.add(token);
@@ -42,6 +67,8 @@ public class mkphonewords {
       }
     }
 
+    /**
+     */
     private static Map<String, List<String []>> createPhoneWordMapFromDictonary(String datName) {
 
         File file = new File(datName);
@@ -57,7 +84,7 @@ public class mkphonewords {
             String zeile = null;
             Map<String, List<String []>> phoneWordMap = new HashMap<String, List<String []>>();
             while ((zeile = in.readLine()) != null) {
-		String [] token = zeile.trim().split("\\s+");
+		String [] token = zeile.trim().toLowerCase().split("\\s+");
 		if (token.length > 1) {
 			processDictEntry(token, phoneWordMap);
 		}
@@ -77,6 +104,8 @@ public class mkphonewords {
         }
     }
 
+    /**
+     */
   public static void main(String []args) {
     if (args.length!=1) {
 	System.out.println("Usage: mkphonewords pathtodict");

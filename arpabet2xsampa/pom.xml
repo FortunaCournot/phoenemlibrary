@@ -11,10 +11,10 @@
   </properties>
 
   <groupId>de.serviceflow.ue</groupId>
-  <artifactId>mkphonewords</artifactId>
+  <artifactId>arpabet2xsampa</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>MakePhoneWords</name>
+  <name>ARPABET-to-X-Sampa-Dictionary-Converter</name>
     
   <dependencies>
     <dependency>
@@ -26,7 +26,7 @@
   </dependencies>
 
   <build>
-    <finalName>mkphonewords</finalName>
+    <finalName>arpabet2xsampa</finalName>
 
     <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
     <scriptSourceDirectory>${basedir}/src/main/scripts</scriptSourceDirectory>
@@ -71,11 +71,11 @@
 
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
-	<version>3.0.0</version>
+        <version>3.0.0</version>
         <configuration>
           <archive>
             <manifest>
-              <mainClass>mkphonewords</mainClass>
+              <mainClass>arpabet2xsampa</mainClass>
             </manifest>
           </archive>
         </configuration>
