@@ -37,7 +37,7 @@ public class arpabet2xsampa {
 	ARPABET2XSAMPA.put("T","t");
 	ARPABET2XSAMPA.put("CH","tS");
 	ARPABET2XSAMPA.put("TH","T");
-	ARPABET2XSAMPA.put("V","V");
+	ARPABET2XSAMPA.put("V","F");
 	ARPABET2XSAMPA.put("W","w");
 	ARPABET2XSAMPA.put("Z","z");
 	ARPABET2XSAMPA.put("ZH","Z");
