@@ -10,6 +10,7 @@ import java.util.*;
 public class xsampa {
 
     static final Map<String,String> XSAMPA = new HashMap<String,String>();
+    static final Map<String,String[]> WORDTOKEN = new HashMap<String,String[]>();
 
     /**
      */
@@ -59,14 +60,61 @@ public class xsampa {
 	XSAMPA.put("strut","V");
     }
 
+    private static void processDictEntry(String [] token) {
+      String word = token[0];
+      if (word.startsWith(";")) {
+          return;
+      }
+      WORDTOKEN.put(word, token);
+    }
+
+    /**
+     */
+    private static void buildTokenMap(String dicPath) {
+        File file = new File(dicPath);
+
+        if (!file.canRead() || !file.isFile()) {
+            System.err.println("access failed");
+        }
+
+        BufferedReader in = null;
+        try {
+            in = new BufferedReader(new FileReader(file));
+            String zeile = null;
+            while ((zeile = in.readLine()) != null) {
+                String [] token = zeile.trim().split("\\s+");
+                if (token.length > 1) {
+                        processDictEntry(token);
+                }
+                // System.out.println("Gelesene Zeile: " + zeile);
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (in != null)
+                try {
+                    in.close();
+                } catch (IOException e) {
+                }
+        }
+    }
 
     /**
      */
     private static void writeSentences() {
         for (String word : XSAMPA.keySet()) {
              String phone = XSAMPA.get(word);
+             String [] token = WORDTOKEN.get(word);
+
+	     System.out.println("<speak><phoneme alphabet=\"x-sampa\" ph=\""+phone+"\">"+phone+"</phoneme></speak>");
+
 	     System.out.print("<speak><phoneme alphabet=\"x-sampa\" ph=\""+phone+"\">"+phone+"</phoneme>"+"<break />");
-	     System.out.println("<phoneme alphabet=\"x-sampa\" ph=\""+phone+phone+phone+"\">"+phone+"</phoneme>"+"<break />"+word+"</speak>");
+	     System.out.print(word);
+             for (int i=1; i<token.length; i++) {
+	         System.out.print("<break />"+"<phoneme alphabet=\"x-sampa\" ph=\""+token[i]+"\">"+token[i]+"</phoneme>");
+             }
+	     System.out.println("</speak>");
         }
 
     }
@@ -74,12 +122,15 @@ public class xsampa {
     /**
      */
   public static void main(String []args) {
-    if (args.length!=0) {
-	System.out.println("Usage: xsampa");
-	System.exit(-1);
+    if (args.length!=1) {
+        System.out.println("Usage: xsampa pathtoxsampadict");
+        System.exit(-1);
     }
 
+    String dicPath = args[0];
+
     buildMapping();
+    buildTokenMap(dicPath);
 
     writeSentences();
   }
