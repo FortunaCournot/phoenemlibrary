@@ -1,0 +1,130 @@
+METADATA ../result/ue4phones/en_US/joanna_s/default
+3`
+00:00:00.37: 0.000000, bitrate: 48 kb/s
+  Duration: 00:00:00.23, bitrate: 355 kb/s
+aI
+00:00:00.47: 0.000000, bitrate: 48 kb/s
+  Duration: 00:00:00.33, bitrate: 354 kb/s
+A
+00:00:00.42: 0.000000, bitrate: 48 kb/s
+  Duration: 00:00:00.30, bitrate: 354 kb/s
+aU
+00:00:00.37: 0.000000, bitrate: 48 kb/s
+  Duration: 00:00:00.26, bitrate: 355 kb/s
+b
+00:00:00.18: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.02, bitrate: 379 kb/s
+d
+00:00:00.16: 0.000000, bitrate: 50 kb/s
+  Duration: 00:00:00.02, bitrate: 385 kb/s
+D_
+00:00:00.18: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.06, bitrate: 362 kb/s
+dZ
+00:00:00.21: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.09, bitrate: 359 kb/s
+eI
+00:00:00.29: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.20, bitrate: 355 kb/s
+E
+00:00:00.29: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.20, bitrate: 355 kb/s
+f
+00:00:00.24: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.11, bitrate: 358 kb/s
+F_
+00:00:00.21: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.09, bitrate: 359 kb/s
+g
+00:00:00.18: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.02, bitrate: 377 kb/s
+h
+00:00:00.16: 0.000000, bitrate: 50 kb/s
+  Duration: 00:00:00.01, bitrate: 402 kb/s
+i
+00:00:00.29: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.18, bitrate: 356 kb/s
+i=
+00:00:00.29: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.18, bitrate: 356 kb/s
+I_
+00:00:00.29: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.18, bitrate: 356 kb/s
+j
+00:00:00.29: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.18, bitrate: 356 kb/s
+k
+00:00:00.21: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.05, bitrate: 365 kb/s
+l
+00:00:00.18: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.08, bitrate: 360 kb/s
+l=
+00:00:00.31: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.22, bitrate: 355 kb/s
+m
+00:00:00.21: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.09, bitrate: 359 kb/s
+@
+00:00:00.24: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.10, bitrate: 359 kb/s
+@`
+00:00:00.37: 0.000000, bitrate: 48 kb/s
+  Duration: 00:00:00.23, bitrate: 355 kb/s
+{
+00:00:00.24: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.10, bitrate: 359 kb/s
+n
+00:00:00.21: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.11, bitrate: 358 kb/s
+N_
+00:00:00.18: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.08, bitrate: 360 kb/s
+OI
+00:00:00.37: 0.000000, bitrate: 48 kb/s
+  Duration: 00:00:00.28, bitrate: 355 kb/s
+O
+00:00:00.29: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.17, bitrate: 356 kb/s
+oU
+00:00:00.39: 0.000000, bitrate: 48 kb/s
+  Duration: 00:00:00.30, bitrate: 354 kb/s
+p
+00:00:00.18: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.03, bitrate: 377 kb/s
+r_
+00:00:00.24: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.10, bitrate: 359 kb/s
+s
+00:00:00.29: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.16, bitrate: 356 kb/s
+S_
+00:00:00.24: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.13, bitrate: 357 kb/s
+t
+00:00:00.18: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.08, bitrate: 360 kb/s
+T_
+00:00:00.21: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.02, bitrate: 386 kb/s
+tS
+00:00:00.26: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.12, bitrate: 358 kb/s
+u
+00:00:00.26: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.17, bitrate: 356 kb/s
+U_
+00:00:00.26: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.17, bitrate: 356 kb/s
+V
+00:00:00.37: 0.000000, bitrate: 48 kb/s
+  Duration: 00:00:00.23, bitrate: 355 kb/s
+w
+00:00:00.26: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.17, bitrate: 356 kb/s
+z
+00:00:00.21: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.11, bitrate: 358 kb/s
+Z_
+00:00:00.21: 0.000000, bitrate: 49 kb/s
+  Duration: 00:00:00.12, bitrate: 358 kb/s
