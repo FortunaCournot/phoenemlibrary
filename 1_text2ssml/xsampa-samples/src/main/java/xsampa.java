@@ -6,6 +6,7 @@ import java.util.*;
 
 
 /**
+ * X-SAMPHA Phone Samples
 */
 public class xsampa {
 
